@@ -33,10 +33,12 @@ export class AppComponent implements OnInit {
     this.rickAndMortyApiService.get(currentPage).subscribe((response) => {
       const { info, results } = response;
 
-      const resultsMapped = results.map(({ name, ...rest }) => ({
-        name: name.toUpperCase(),
-        ...rest,
-      }));
+      const resultsMapped = results
+        .map(({ name, ...rest }) => ({
+          name: name.toUpperCase(),
+          ...rest,
+        }))
+        .filter((_, idx) => idx + 1 <= 12);
 
       this.pagination = { ...info, currentPage: newPage ?? 1 };
       this.results = resultsMapped;
