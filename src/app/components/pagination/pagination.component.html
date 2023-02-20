@@ -1,0 +1,5 @@
+<div class="container-pagination">
+  <button [disabled]="pagination.currentPage === firstPosition" (click)="handleNavigation('prev')">prev</button>
+  <span>{{pagination.currentPage}}</span>
+  <button [disabled]="pagination.currentPage === pagination.pages" (click)="handleNavigation('next')">next</button>
+</div>

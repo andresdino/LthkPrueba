@@ -1,0 +1,35 @@
+.container-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid tomato;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+span {
+  margin: 0 10px;
+  font-size: 17px;
+}
+
+button:hover {
+  background-color: tomato;
+}
+
+button:disabled {
+  background-color: transparent;
+  border-color: gray;
+  cursor: not-allowed;
+}

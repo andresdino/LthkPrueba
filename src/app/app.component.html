@@ -1,0 +1,8 @@
+<app-search (input)="handleSearch($event)"></app-search>
+<div *ngIf="isLoading" class="container-spinner" [ngClass]="isLoading && 'visible'">
+  <div class="spinner"></div>
+</div>
+<main *ngIf="!isLoading">
+  <app-card *ngFor="let character of results | searcher: searchText" [character]="character"></app-card>
+</main>
+<app-pagination [pagination]="pagination" (click)="handlePage($event)"></app-pagination>

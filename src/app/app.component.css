@@ -1,0 +1,45 @@
+main {
+  display: grid;
+  gap: 10px;
+  padding: 0 10px;
+  grid-auto-flow: dense;
+  grid-auto-rows: 416.8px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+}
+
+.container-spinner {
+  display: none;
+  margin-top: 30px;
+  height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  border-top-color: transparent;
+
+  animation: animationSpinner infinite 1s linear;
+}
+
+@keyframes animationSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

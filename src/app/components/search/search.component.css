@@ -1,0 +1,40 @@
+section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 40%;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid #252424;
+  color: #fff;
+  outline: none;
+  padding: 0 10px;
+  font-size: 18px;
+  transition: border-color 500ms ease;
+}
+
+input:focus-visible {
+  border: 1px solid #09f;
+  transition: border-color 500ms ease;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #252424;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 7px;
+  transition: background-color 500ms ease;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: background-color 500ms ease;
+  background-color: #09f;
+}
